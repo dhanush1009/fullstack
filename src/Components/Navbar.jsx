@@ -24,7 +24,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
           <>
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/add">Add Password</Link>
-            <span className="logout-link" onClick={() => setIsLoggedIn(false)}>
+            <span className="nav-links" onClick={() => setIsLoggedIn(false)}>
               <FaSignOutAlt /> Logout
             </span>
           </>
