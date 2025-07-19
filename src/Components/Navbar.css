@@ -1,0 +1,26 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.navbar h3 {
+  margin: 0;
+}
+
+.navbar a, .navbar .logout-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar a:hover, .navbar .logout-link:hover {
+  text-decoration: underline;
+}
