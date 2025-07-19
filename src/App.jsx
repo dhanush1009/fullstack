@@ -32,8 +32,7 @@ function App() {
             setPasswords(prev => prev.filter((item, idx) => idx !== index))
           } /> : <Navigate to="/" />}
         />
-        <Route
-          path="/add"
+        <Route path="/add"
           element={isLoggedIn ? <AddPassword setPasswords={setPasswords} /> : <Navigate to="/" />}
         />
       </Routes>

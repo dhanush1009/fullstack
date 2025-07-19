@@ -4,23 +4,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #007bff;
+  background: #007bff; /* blue background */
   padding: 1rem 2rem;
   color: white;
 }
 
-.navbar h3 {
-  margin: 0;
+.logo-section {
+  display: flex;
+  align-items: center;
 }
 
-.navbar a, .navbar .logout-link {
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  border-radius: 50%; /* optional: circle logo */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a,
+.logout-link {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
   font-weight: 500;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
 
-.navbar a:hover, .navbar .logout-link:hover {
+
+.nav-links a:hover,
+.logout-link:hover {
   text-decoration: underline;
+}
+
+.logout-link svg {
+  margin-right: 0.3rem;
 }

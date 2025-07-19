@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Assuming you have a CSS file for styling
+import './Navbar.css';
+import { FaSignOutAlt } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
+  console.log("isLoggedIn:", isLoggedIn); // check in console
+
   return (
     <nav className="navbar">
-      <h3>Password Manager</h3>
-      <div>
+      <div className="logo-section">
+        <img src={logo} alt="Logo" className="logo" />
+        <h3>Password Manager</h3>
+      </div>
+      <div className="nav-links">
         {!isLoggedIn && (
           <>
             <Link to="/">Login</Link>
@@ -17,7 +24,9 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
           <>
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/add">Add Password</Link>
-            <span className="logout-link" onClick={() => setIsLoggedIn(false)}>Logout</span>
+            <span className="logout-link" onClick={() => setIsLoggedIn(false)}>
+              <FaSignOutAlt /> Logout
+            </span>
           </>
         )}
       </div>
